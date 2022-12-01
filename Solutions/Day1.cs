@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2022
+﻿namespace AdventOfCode2022.Solutions
 {
     public class Day1 : DayN
     {
@@ -19,14 +19,14 @@
 
             foreach (string snack in day1Inputs)
             {
-                if (String.IsNullOrWhiteSpace(snack))
+                if (string.IsNullOrWhiteSpace(snack))
                 {
                     maxTotalCalories = Math.Max(maxTotalCalories, currentTotalCalories);
                     currentTotalCalories = 0;
                 }
                 else
                 {
-                    currentTotalCalories += Int32.Parse(snack);
+                    currentTotalCalories += int.Parse(snack);
                 }
             }
 
@@ -39,16 +39,16 @@
 
             int currentTotalCalories = 0;
 
-            foreach(string snack in day1Inputs)
+            foreach (string snack in day1Inputs)
             {
-                if (String.IsNullOrWhiteSpace(snack))
+                if (string.IsNullOrWhiteSpace(snack))
                 {
                     allTotalCalories.Add(currentTotalCalories);
                     currentTotalCalories = 0;
                 }
                 else
                 {
-                    currentTotalCalories += Int32.Parse(snack);
+                    currentTotalCalories += int.Parse(snack);
                 }
             }
 
